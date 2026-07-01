@@ -1,5 +1,6 @@
 package jenopstons.bananamod;
 
+import jenopstons.bananamod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.util.Identifier;
@@ -13,7 +14,7 @@ public class BananaMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
 	}
 
 	public static Identifier id(String path) {
