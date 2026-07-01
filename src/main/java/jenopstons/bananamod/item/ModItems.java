@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item BANANA = registerItem("banana", new Item(new Item.Settings()));
+    public static final Item BANANA = registerItem("banana", new Item(new Item.Settings().food(ModFoodComponents.BANANA)));
 
 
     private static Item registerItem(String name, Item item) {
