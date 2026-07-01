@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "bananamod",
+	"version": "${version}",
+	"name": "BananaMod",
+	"description": "Adds BANANA to game",
+	"authors": [
+		"Jenopstons!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/bananamod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jenopstons.bananamod.BananaMod"
+		],
+		"fabric-datagen": [
+			"jenopstons.bananamod.BananaModDataGenerator"
+		],
+		"client": [
+			"jenopstons.bananamod.BananaModClient"
+		]
+	},
+	"mixins": [
+		"bananamod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
