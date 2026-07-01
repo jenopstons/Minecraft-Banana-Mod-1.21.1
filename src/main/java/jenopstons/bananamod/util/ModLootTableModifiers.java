@@ -22,7 +22,7 @@ public class ModLootTableModifiers {
             if(JUNGLE_LEAVES_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f)) // Drops 25% of the time
+                        .conditionally(RandomChanceLootCondition.builder(1f)) // Drops 25% of the time
                         .with(ItemEntry.builder(ModItems.BANANA))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
