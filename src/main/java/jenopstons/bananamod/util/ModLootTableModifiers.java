@@ -14,17 +14,17 @@ import net.minecraft.util.Identifier;
 public class ModLootTableModifiers {
     private static final Identifier JUNGLE_LEAVES_ID
             = Identifier.of("minecraft", "blocks/jungle_leaves");
-    private static final Identifier CREEPER_ID
-            = Identifier.of("minecraft", "entities/creeper");
+//    private static final Identifier CREEPER_ID
+//            = Identifier.of("minecraft", "entities/creeper");
 
     public static void modifyLootTables() {
         LootTableEvents.MODIFY.register((key, tableBuilder, source, registry) -> {
             if(JUNGLE_LEAVES_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f)) // Drops 25% of the time
-                        .with(ItemEntry.builder(ModItems.BANANA))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 25% of the time
+                        .with(ItemEntry.builder(ModItems.BANANA));
+//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
