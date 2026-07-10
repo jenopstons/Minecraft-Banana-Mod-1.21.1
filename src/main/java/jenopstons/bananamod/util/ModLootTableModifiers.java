@@ -22,22 +22,32 @@ public class ModLootTableModifiers {
             if(JUNGLE_LEAVES_ID.equals(key.getValue())) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 25% of the time
+                        .conditionally(RandomChanceLootCondition.builder(0.01f)) // Drops 1% of the time
                         .with(ItemEntry.builder(ModItems.BANANA));
 //                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
 
                 tableBuilder.pool(poolBuilder.build());
             }
 
-//            if(LootTables.IGLOO_CHEST_CHEST.equals(key)) {
-//                LootPool.Builder poolBuilder = LootPool.builder()
-//                        .rolls(ConstantLootNumberProvider.create(1))
-//                        .conditionally(RandomChanceLootCondition.builder(1.0f)) // Drops 100% of the time
-//                        .with(ItemEntry.builder(ModItems.CHISEL))
-//                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
-//
-//                tableBuilder.pool(poolBuilder.build());
-//            }
+            if(LootTables.JUNGLE_TEMPLE_CHEST.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.4f)) // Drops 20% of the time
+                        .with(ItemEntry.builder(ModItems.BANANA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
+
+            if(LootTables.VILLAGE_SHEPARD_CHEST.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .conditionally(RandomChanceLootCondition.builder(0.1f)) // Drops 100% of the time
+                        .with(ItemEntry.builder(ModItems.BANANA))
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 4.0f)).build());
+
+                tableBuilder.pool(poolBuilder.build());
+            }
 //
 //            if(CREEPER_ID.equals(key.getValue())) {
 //                LootPool.Builder poolBuilder = LootPool.builder()

@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "bananamod",
 	"version": "${version}",
-	"name": "BananaMod",
-	"description": "Adds BANANA to game",
+	"name": "Banana Mod",
+	"description": "Adds banana item to the game",
 	"authors": [
 		"Jenopstons!"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/jenopstons/Minecraft-Banana-Mod-1.21.1"
 	},
-	"license": "CC0-1.0",
+	"license": "CC0",
 	"icon": "assets/bananamod/icon.png",
 	"environment": "*",
 	"entrypoints": {
